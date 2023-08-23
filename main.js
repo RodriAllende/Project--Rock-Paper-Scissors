@@ -38,5 +38,56 @@ function checkingWinner (playerchoice , computerchoice) {
 
 
     const playerchoice = "Rock";
-    const computerselection =   computerchoice();
-    console.log(playRound(playerchoice, computerselection));
+    const computerselection = computerchoice();
+   
+
+    function getPlayerChoice() {
+        let validInput = false;
+    
+        while(validInput == false) {
+            const choice = prompt("Rock Paper Scissor");
+    
+            if (choice == null) {
+                continue;
+            }
+            const choiceInLower = choice.toLowerCase();
+            if(choice.includes(choiceInLower)) {
+                validInput = true;
+                return choiceInLower;
+            }
+        }
+    }
+
+    function game () {
+        console.log("Welcome");
+
+        let playerScore = 0;
+        let computerScore = 0;
+        for (let i=0 ;i<5;i++){
+            const playerchoice = getPlayerChoice();
+            const computerselection = computerchoice();
+          
+            console.log(playRound(computerselection, playerchoice));
+            if (checkingWinner(playerchoice, computerselection) == "Player") {
+                playerScore++;
+            }
+            else if (checkingWinner(playerchoice, computerselection) == "Computer") {
+                computerScore++;
+            }
+        }
+        console.log("Game over!")
+         if (playerScore > computerScore) {
+            console.log("Player was the winner!");
+        } else if (playerScore < computerScore) {
+            console.log("Computer was the winner!");
+        } else {
+            console.log("We have a tie!");
+        }
+    }
+
+        
+    
+     game();
+
+ 
+     
