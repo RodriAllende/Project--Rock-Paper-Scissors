@@ -11,21 +11,23 @@ h1.title{
 
 }
 
-section.playOption{
+.playOption{
+    display: flex;
     
-     margin-top: -300px;
-    margin-left: 800px;
-    gap: 50px;
+    margin-left: 500px;
+    margin-right: 200px;
+    gap: 40px;
     flex-direction: row;
     justify-content:center;
+ 
 
 }
 
 
 #rock-button {
     background-image: url(./images/_38293bd7-a9c1-4bc1-916c-563f385f2cda.jfif);
-    height: 200px;   
-    width: 175px;
+    height: 250px;   
+    width: 250px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     border: 8px solid white;
@@ -36,8 +38,8 @@ section.playOption{
 
   #paper-button{
 background-image: url(./images/_a130ec79-14f6-46da-9d9f-dea816247ebd.jfif);        
-height: 200px;   
-width: 175px;
+height: 250px;   
+width: 250px;
 background-size: 100% 100%;
 background-repeat: no-repeat;
 border: 8px solid white;
@@ -51,8 +53,8 @@ border-radius: 40px;
 
 #scissors-button {
         background-image: url(./images/_41770e92-263d-472d-8f61-2b56ff3aedc2.jfif);
-        height: 200px;   
-        width: 175px;
+        height: 250px;   
+        width: 250px;
         background-size: 100% 100%;
         background-repeat: no-repeat;
         border: 8px solid white;
@@ -62,8 +64,8 @@ border-radius: 40px;
 
     
     body {
-background-color: black;      
- background-size: cover;
+background-color: black;
+background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center center;
@@ -82,24 +84,61 @@ background-color: black;
 
   .tablero{
     color: white;
-    margin-left: 150px;
-    border: solid 40px red;
-    width: 300px;
-    height: 300px;
+    margin-left: 75px;
+    width: 400px;
+    height: 200px;
     font-family: 'Bangers', cursive;
     color: white;
      font-size: 30px;
+   position:fixed;
+     
   }
 
-  .puntos{
-    background-color:yellow;
-    width: 100px;
-    height: 100px;
-    gap: 10px;
-    margin-left: 90px;
+  .puntos {
+  
+    width: 200px; /* Aumenta el ancho si es necesario */
+    height: auto; /* Usa "auto" para permitir el ajuste de altura según el contenido */
+    margin-left: 50px;
+    display: flex; /* Habilita el modelo de caja flexible */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center;
+    position: fixed; 
     margin-top: 100px;
   }
-
+  
+  /* Estilo para las celdas con títulos */
+  .puntos th {
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  /* Estilo para las celdas de resultados */
+  .puntos td {
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+   
+    
   #winner-message{
+    width: 400px;
+    height: 200px;
+    font-family: 'Bangers', cursive;
     color: white;
+     font-size: 60px;
+   position:fixed;
+   margin-left: 500px;
+   margin-right: 1100px;
+   display: flex;
+   flex-direction: row;
+   padding-right: 600px;
+   justify-content: flex-start;
+   margin-bottom: 300px;
+   padding-bottom: 200px;
+
+
+  }
+  #round-winner{
+    position: fixed;
   }
