@@ -2,28 +2,27 @@ h1.title{
     display: flex;
     justify-content: center;
     font-family: 'Bangers', cursive;
-  color: black;
+  color: white;
    font-size: 70px;
    margin-top: 20px;
-   -webkit-text-stroke-color: aliceblue;
+
    
       
 
 }
 
 section.playOption{
-   
-    display: flex;
-margin-top: 50px;
-    gap: 30px;
+    
+     margin-top: -300px;
+    margin-left: 800px;
+    gap: 50px;
     flex-direction: row;
     justify-content:center;
- 
-    
- 
+
 }
 
-button.Rock {
+
+#rock-button {
     background-image: url(./images/_38293bd7-a9c1-4bc1-916c-563f385f2cda.jfif);
     height: 200px;   
     width: 175px;
@@ -35,7 +34,7 @@ button.Rock {
   
   
 
-    button.Paper{
+  #paper-button{
 background-image: url(./images/_a130ec79-14f6-46da-9d9f-dea816247ebd.jfif);        
 height: 200px;   
 width: 175px;
@@ -50,7 +49,7 @@ border-radius: 40px;
 
 
 
-    button.Scissors{
+#scissors-button {
         background-image: url(./images/_41770e92-263d-472d-8f61-2b56ff3aedc2.jfif);
         height: 200px;   
         width: 175px;
@@ -63,7 +62,7 @@ border-radius: 40px;
 
     
     body {
-background-image: url(./images/wallpaperflare.com_wallpaper.jpg);       
+background-color: black;      
  background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -75,10 +74,32 @@ background-image: url(./images/wallpaperflare.com_wallpaper.jpg);
         overflow: hidden;
       }
       
-section.Score{
-    border: solid black 2px;
-    display: flex;
-    flex-direction: row;
-    width: 200px;
-    height: 200px;
-}
+
+#rock-button, #paper-button, #scissors-button {
+    cursor:pointer;}
+
+
+
+  .tablero{
+    color: white;
+    margin-left: 150px;
+    border: solid 40px red;
+    width: 300px;
+    height: 300px;
+    font-family: 'Bangers', cursive;
+    color: white;
+     font-size: 30px;
+  }
+
+  .puntos{
+    background-color:yellow;
+    width: 100px;
+    height: 100px;
+    gap: 10px;
+    margin-left: 90px;
+    margin-top: 100px;
+  }
+
+  #winner-message{
+    color: white;
+  }
