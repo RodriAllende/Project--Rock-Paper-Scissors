@@ -1,144 +1,144 @@
-h1.title{
-    display: flex;
-    justify-content: center;
-    font-family: 'Bangers', cursive;
-  color: white;
-   font-size: 70px;
-   margin-top: 20px;
+h1.title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Bangers', cursive;
+  color: red;
+  font-size: 70px;
+  margin-top: 20px;
 
-   
-      
+
+
 
 }
 
-.playOption{
-    display: flex;
-    
-    margin-left: 500px;
-    margin-right: 200px;
-    gap: 40px;
-    flex-direction: row;
-    justify-content:center;
- 
+.playOption {
+  display: flex;
+  margin-left: 500px;
+  gap: 30px;
+  margin-right: 10px;
+  flex-direction: row;
+  justify-content: center;
+
 
 }
 
 
 #rock-button {
-    background-image: url(./images/_38293bd7-a9c1-4bc1-916c-563f385f2cda.jfif);
-    height: 250px;   
-    width: 250px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    border: 8px solid white;
-    border-radius: 40px;
-  }
-  
-  
-
-  #paper-button{
-background-image: url(./images/_a130ec79-14f6-46da-9d9f-dea816247ebd.jfif);        
-height: 250px;   
-width: 250px;
-background-size: 100% 100%;
-background-repeat: no-repeat;
-border: 8px solid white;
-border-radius: 40px;
+  background-image: url(./images/_38293bd7-a9c1-4bc1-916c-563f385f2cda.jfif);
+  height: 200px;
+  width: 200px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 8px solid red;
+  border-radius: 40px;
 }
-    
-    
-    
+
+
+
+#paper-button {
+  background-image: url(./images/_a130ec79-14f6-46da-9d9f-dea816247ebd.jfif);
+  height: 200px;
+  width: 200px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 8px solid red;
+  border-radius: 40px;
+}
+
+
+
 
 
 
 #scissors-button {
-        background-image: url(./images/_41770e92-263d-472d-8f61-2b56ff3aedc2.jfif);
-        height: 250px;   
-        width: 250px;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        border: 8px solid white;
-        border-radius: 40px;
-      }
-       
-
-    
-    body {
-background-color: black;
-background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center center;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-      
-
-#rock-button, #paper-button, #scissors-button {
-    cursor:pointer;}
+  background-image: url(./images/_41770e92-263d-472d-8f61-2b56ff3aedc2.jfif);
+  height: 200px;
+  width: 200px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 8px solid red;
+  border-radius: 40px;
+}
 
 
 
-  .tablero{
-    color: white;
-    margin-left: 75px;
-    width: 400px;
-    height: 200px;
-    font-family: 'Bangers', cursive;
-    color: white;
-     font-size: 30px;
-   position:fixed;
-     
-  }
-
-  .puntos {
-  
-    width: 200px; /* Aumenta el ancho si es necesario */
-    height: auto; /* Usa "auto" para permitir el ajuste de altura según el contenido */
-    margin-left: 50px;
-    display: flex; /* Habilita el modelo de caja flexible */
-    flex-direction: column; /* Coloca los elementos en una columna */
-    align-items: center;
-    position: fixed; 
-    margin-top: 100px;
-  }
-  
-  /* Estilo para las celdas con títulos */
-  .puntos th {
-    font-size: 20px;
-    padding: 10px;
-  }
-  
-  /* Estilo para las celdas de resultados */
-  .puntos td {
-    font-size: 24px;
-    padding: 10px;
-    text-align: center;
-  }
-  
-   
-    
-  #winner-message{
-    width: 400px;
-    height: 200px;
-    font-family: 'Bangers', cursive;
-    color: white;
-     font-size: 60px;
-   position:fixed;
-   margin-left: 500px;
-   margin-right: 1100px;
-   display: flex;
-   flex-direction: row;
-   padding-right: 600px;
-   justify-content: flex-start;
-   margin-bottom: 300px;
-   padding-bottom: 200px;
+body {
+  background-image: url(./images/884599-Osaka-Sunrises-and-sunsets-Japan-Advertisement-Canal.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 
-  }
-  #round-winner{
-    position: fixed;
-  }
+#rock-button,
+#paper-button,
+#scissors-button {
+  cursor: pointer;
+}
+
+
+
+.tablero {
+  color:white;
+  margin-left: 105px;
+  width: 400px;
+  height: 200px;
+  font-family: 'Bangers', cursive;
+  font-size: 30px;
+  position: fixed;
+  text-align: center;
+
+}
+
+.puntos {
+
+  width: 200px;
+  height: auto;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  margin-top: 100px;
+}
+
+.puntos th {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.puntos td {
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+}
+
+#winner-message {
+  width: 400px;
+  height: 100px;
+  font-family: 'Bangers', cursive;
+  color: red;
+  font-size: 100px;
+  margin-left: 700px;
+  margin-right: 100px;
+  padding-right: 100px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 0px;
+}
+
+#round-winner {
+  position: fixed;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+h3 {
+
+  font-size: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: -55px;
+}

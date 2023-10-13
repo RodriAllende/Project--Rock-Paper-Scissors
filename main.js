@@ -1,12 +1,11 @@
-console.log("Aprendiendo");
+
 
 let choices = ["Rock", "Paper", "Scissors"];
 
-// Variables para llevar un registro de las puntuaciones
+
 let playerScore = 0;
 let computerScore = 0;
 
-// Función para actualizar el marcador en el HTML
 function updateScoreboard() {
   const playerScoreElement = document.getElementById('Player1');
   const computerScoreElement = document.getElementById('Computer');
@@ -36,50 +35,50 @@ function checkingWinner(playerChoice, computerChoice) {
 
 function playRound(playerChoice, computerChoice) {
   if (playerScore === 5 || computerScore === 5) {
-    return; // El juego ya ha terminado, no hacer nada
+    return; 
   }
 
   const result = checkingWinner(playerChoice, computerChoice);
   if (result === "Tie") {
     return "It's a Tie!";
   } else if (result === "Player") {
-    playerScore++; // Incrementar la puntuación del jugador
-    updateScoreboard(); // Actualizar el marcador después de cada ronda
+    playerScore++; 
+    updateScoreboard(); 
     if (playerScore === 5) {
-      announceWinner("¡Player 1 Win!");
-      setTimeout(resetGame, 2000); // Reiniciar el juego automáticamente después de 2 segundos
+      announceWinner("Player 1 Win");
+      setTimeout(resetGame, 2000); 
       return;
     }
     return `You Win! ${playerChoice} beats ${computerChoice}`;
   } else {
-    computerScore++; // Incrementar la puntuación de la computadora
-    updateScoreboard(); // Actualizar el marcador después de cada ronda
+    computerScore++; 
+    updateScoreboard(); 
     if (computerScore === 5) {
-      announceWinner("¡Computer Win!");
-      setTimeout(resetGame, 10000); // Reiniciar el juego automáticamente después de 2 segundos
+      announceWinner("Computer Win");
+      setTimeout(resetGame, 10000); 
       return;
     }
     return `You lose! ${computerChoice} beats ${playerChoice}`;
   }
 }
 
-// Función para mostrar un resultado en el tablero de puntuación
+
 function displayResult(result) {
   const roundWinnerElement = document.getElementById('round-winner');
   roundWinnerElement.textContent = result;
 }
 
-// Función para anunciar al ganador
+
 function announceWinner(message) {
   const winnerMessage = document.getElementById('winner-message');
   winnerMessage.textContent = message;
   setTimeout(function () {
-    winnerMessage.textContent = ""; // Limpiamos el contenido del mensaje después de 3 segundos
-  }, 3000); // 3000 milisegundos (3 segundos)
+    winnerMessage.textContent = ""; 
+  }, 3000); // 
 }
 
 
-// Función para reiniciar el juego
+
 function resetGame() {
   playerScore = 0;
   computerScore = 0;
@@ -89,14 +88,13 @@ function resetGame() {
   enablePlayerChoices();
 }
 
-// Agrega una función para habilitar las elecciones del jugador
+
 function enablePlayerChoices() {
   document.getElementById('rock-button').disabled = false;
   document.getElementById('paper-button').disabled = false;
   document.getElementById('scissors-button').disabled = false;
 }
 
-// Asociar eventos de clic a los botones de elección del jugador
 document.getElementById('rock-button').addEventListener('click', function () {
   handlePlayerChoice('Rock');
 });
@@ -118,10 +116,10 @@ function handlePlayerChoice(playerChoice) {
   }
 }
 
-// Función que maneja el juego completo
+
 function game() {
   console.log("Welcome!");
 }
 
-// Iniciar el juego
+
 game();
